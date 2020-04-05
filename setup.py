@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from glob import glob
 
 
-scenes = glob('*.py')
+scenes = glob('scenes/*.py')
 
 setup(
     name='AngryHome',
