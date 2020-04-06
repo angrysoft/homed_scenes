@@ -2,9 +2,10 @@ INSTALL=install -C
 PREFIX = /usr
 
 install:
-	python3 setup.py -v install --prefix=$(DESTDIR)$(PREFIX) --record files.txt
+	install -d $(DESTDIR)/etc/angryhome/scenes
+	install -d $(DESTDIR)/etc/angryhome/conf.d
+	cp -v scenes/*.py $(DESTDIR)/etc/angryhome/scenes
 
 uninstall:
-	rm -rvf $(DESTDIR)/etc/angryhome
-	rm -vf $(DESTDIR)/usr/lib/systemd/system/homed.service
+	rm -rvf $(DESTDIR)/etc/angryhome/scenes
 	./uninstall.py

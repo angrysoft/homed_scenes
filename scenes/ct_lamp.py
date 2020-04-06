@@ -27,7 +27,8 @@ class Scene(BaseAutomation):
             _ct -= self.calc_ct(_ct, _delta, _ts)
             if _ct < 0:
                 break
-            self.lamp.ct_pc(_ct)
+            if self.lamp.is_on():
+                self.lamp.set_ct_pc(_ct)
             self.sleep(_ts)
         self.lamp.ct_pc(0)
         
