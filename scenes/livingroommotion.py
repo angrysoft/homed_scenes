@@ -15,7 +15,7 @@ class Scene(BaseAutomation):
         if TimeCheck('<>', sunset, sunrise).status:
             lamp = self.get_device('0x0000000007e7bae0')
             lamp.on()
-            if TimeCheck('>' '22:00'):
+            if TimeCheck('>', '22:00'):
                 lamp.set_bright(1)
             else:
                 lamp.set_bright(30)

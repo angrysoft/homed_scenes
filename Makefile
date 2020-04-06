@@ -6,4 +6,3 @@ install:
 
 uninstall:
 	rm -rvf $(DESTDIR)/etc/angryhome/scenes
-	./uninstall.py
