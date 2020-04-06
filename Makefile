@@ -1,5 +1,3 @@
-INSTALL=install -C
-PREFIX = /usr
 
 install:
 	install -d $(DESTDIR)/etc/angryhome/scenes
