@@ -22,6 +22,8 @@ class Scene(BaseAutomation):
     def on_power_on(self):
         if TimeCheck('>', '23:00'):
             self.lamp.set_bright(1)
+            self.lamp.set_ct_pc(1)
         else:
             self.lamp.set_bright(30)
+            self.lamp.set_ct_pc(50)
             
