@@ -20,7 +20,8 @@ class Scene(BaseAutomation):
             self.lamp.off()
     
     def on_power_on(self):
-        if TimeCheck('>', '23:00').status:
+        sunrise = self.daemon.config['datetime']['sunrise']
+        if TimeCheck('<>', '23:00', sunrise).status:
             self.lamp.set_bright(1)
             self.lamp.set_ct_pc(0)
         else:
