@@ -12,6 +12,7 @@ class Scene(BaseAutomation):
     def toggle_light(self):
         if self.kitchen_lamp:
             self.kitchen_lamp.channel_0.toggle()
+            self.kitchen_lamp.channel_1.off()
         
     def toggle_strip(self):
         if self.strip_switch:
