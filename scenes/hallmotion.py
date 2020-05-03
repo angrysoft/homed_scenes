@@ -1,5 +1,5 @@
 from homedaemon.scenes import BaseAutomation
-from homedaemon.scenes import TimeCheck
+from homedaemon.scenes import Time, TimeRange
 
 
 class Scene(BaseAutomation):
@@ -10,19 +10,23 @@ class Scene(BaseAutomation):
         self.add_trigger('report.158d00029a49ba.no_motion.120', self.on_no_motion)
     
     def on_motion(self):
-        sunrise = self.daemon.config['datetime']['sunrise']
-        sunset = self.daemon.config['datetime']['sunset']
-        if TimeCheck('<>', sunset, sunrise).status:
+        sunrise = Time(time_str=self.daemon.config['datetime']['sunrise'])
+        sunset = Time(time_str=self.daemon.config['datetime']['sunset'])
+        _range = TimeRange(sunset, sunrise)
+        _now = self.now()
+        if _now in _range:
             entrance = self.get_device('158d0002b74c28')
             wallsw = self.get_device('158d0002a18c2b')
+            lamp = self.get_device('0x0000000007e7bae0')
             if entrance.status == 'open':
                 wallsw.on()
-                lamp = self.get_device('0x0000000007e7bae0')
                 lamp.on()
                 self.sleep(25)
                 wallsw.channel_0.off()
                 self.sleep(10)
                 wallsw.channel_1.off()
+            elif _now in TimeRange(Time(23), sunrise) and lamp.is_on:
+                return
             else:
                 wallsw.channel_1.on()
                 self.sleep(25)

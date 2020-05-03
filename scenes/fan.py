@@ -7,7 +7,7 @@ class Scene(BaseAutomation):
         self.add_trigger('report.158d0002abac97.channel_1.on', self.on_on)
         self.add_trigger('report.158d0002abac97.channel_1.off', self.on_off)
         self.wallsw = self.get_device('158d0002abac97')
-        # self.switch = self.get_device('')
+        self.switch = self.get_device('1000b6063e')
         self._timer_on = RunAfter(240, self.fun_on)
         self._timer_off = RunAfter(5, self.fun_off)
 
@@ -26,6 +26,6 @@ class Scene(BaseAutomation):
     def fun_off(self):
         if self.wallsw.channel_1.is_off():
             self.wallsw.channel_0.off()
-            # self.switch.off()
+            self.switch.off()
     
         

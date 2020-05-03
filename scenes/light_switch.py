@@ -25,7 +25,6 @@ class Scene(BaseAutomation):
         # self.lamp.set_bricct(100,1)
         for _sid in dev_to_off:
             dev = self.get_device(_sid)
-            print(dev.model)
             if dev.model == 'plug':
                 dev.power.off()
             elif dev.model == 'ctrl_neutral2':
