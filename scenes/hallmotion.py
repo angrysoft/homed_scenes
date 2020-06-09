@@ -10,8 +10,9 @@ class Scene(BaseAutomation):
         self.add_trigger('report.158d00029a49ba.no_motion.120', self.on_no_motion)
     
     def on_motion(self):
-        sunrise = Time(time_str=self.daemon.config['datetime']['sunrise'])
-        sunset = Time(time_str=self.daemon.config['datetime']['sunset'])
+        clock = self.get_device('clock')
+        sunrise = Time(time_str=clock.sunrise)
+        sunset = Time(time_str=clock.sunset)
         _range = TimeRange(sunset, sunrise)
         _now = self.now()
         if _now in _range:

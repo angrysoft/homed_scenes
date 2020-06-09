@@ -1,5 +1,5 @@
 from homedaemon.scenes import BaseAutomation
-from homedaemon.scenes import TimeCheck
+from homedaemon.scenes import Time, TimeRange
 from datetime import datetime
 
 class Scene(BaseAutomation):
@@ -12,9 +12,12 @@ class Scene(BaseAutomation):
         self.lamp = self.get_device('0x0000000007e7bae0')
     
     def on_motion(self):
-        sunrise = self.daemon.config['datetime']['sunrise']
-        sunset = self.daemon.config['datetime']['sunset']
-        if TimeCheck('<>', sunset, sunrise).status:
+        clock = self.get_device('clock')
+        sunrise = Time(time_str=clock.sunrise)
+        sunset = Time(time_str=clock.sunset)
+        _range = TimeRange(sunset, sunrise)
+        _now = self.now()
+        if _now in _range:
             self.lamp.on()
         else:
             self.lamp.off()
