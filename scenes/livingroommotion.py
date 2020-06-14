@@ -10,11 +10,11 @@ class Scene(BaseAutomation):
         self.add_trigger('report.0x0000000007e7bae0.power.on', self.on_power_on)
         self.place = 'Living room'
         self.lamp = self.get_device('0x0000000007e7bae0')
+        self.clock = self.get_device('clock')
     
     def on_motion(self):
-        clock = self.get_device('clock')
-        sunrise = Time(time_str=clock.sunrise)
-        sunset = Time(time_str=clock.sunset)
+        sunrise = Time(time_str=self.clock.sunrise)
+        sunset = Time(time_str=self.clock.sunset)
         _range = TimeRange(sunset, sunrise)
         _now = self.now()
         if _now in _range:
@@ -23,8 +23,9 @@ class Scene(BaseAutomation):
             self.lamp.off()
     
     def on_power_on(self):
-        sunrise = self.daemon.config['datetime']['sunrise']
-        if TimeCheck('<>', '23:00', sunrise).status:
+        sunrise = Time(time_str=self.clock.sunrise)
+        _range = TimeRange(Time(23), sunrise)
+        if self.now() in _range:
             self.lamp.set_bright(1)
             self.lamp.set_ct_pc(0)
         else:
