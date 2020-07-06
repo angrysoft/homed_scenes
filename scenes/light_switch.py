@@ -8,7 +8,6 @@ class Scene(BaseAutomation):
         self.add_trigger('report.158d00033ef2d8.status.click', self.lamp_toggle)
         self.add_trigger('report.158d00033ef2d8.status.double_click', self.toggle_bright)
         self.place = 'Bedroom'
-        self.lamp = self.get_device('235444403') 
     
     def off_others(self):
         dev_to_off = ['158d00024e2e5b',
@@ -38,12 +37,14 @@ class Scene(BaseAutomation):
         # self.lamp.set_bricct(1,1)
     
     def lamp_toggle(self):
+        self.lamp = self.get_device('235444403') 
         if self.lamp:
             self.lamp.toggle()
             if self.lamp.is_on:
                 self.lamp.set_bricct(1,1)
     
     def toggle_bright(self):
+        self.lamp = self.get_device('235444403') 
         if self.lamp:
             if self.lamp.bright < 100:
                 self.lamp.set_bricct(100,100)
