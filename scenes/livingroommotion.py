@@ -1,10 +1,9 @@
 from homedaemon.scenes import BaseAutomation
 from homedaemon.scenes import Time, TimeRange
-from datetime import datetime
 
 class Scene(BaseAutomation):
-    def __init__(self,sid, daemon):
-        super().__init__(sid, daemon)
+    def __init__(self,sid:str):
+        super().__init__(sid)
         self.name = 'Livingroom motion'
         self.add_trigger('report.158d0002ec2fa6.status.motion', self.on_motion)
         self.add_trigger('report.0x0000000007e7bae0.power.on', self.on_power_on)

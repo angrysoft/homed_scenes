@@ -1,8 +1,8 @@
 from homedaemon.scenes import BaseAutomation, RunAfter
 
 class Scene(BaseAutomation):
-    def __init__(self,sid, daemon):
-        super().__init__(sid, daemon)
+    def __init__(self,sid:str):
+        super().__init__(sid)
         self.name = 'Bathroom fan'
         self.add_trigger('report.158d0002abac97.channel_1.on', self.on_on)
         self.add_trigger('report.158d0002abac97.channel_1.off', self.on_off)

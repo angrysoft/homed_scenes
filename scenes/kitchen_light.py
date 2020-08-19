@@ -1,8 +1,8 @@
 from homedaemon.scenes import BaseAutomation
 
 class Scene(BaseAutomation):
-    def __init__(self,sid, daemon):
-        super().__init__(sid, daemon)
+    def __init__(self,sid:str):
+        super().__init__(sid)
         self.name = 'Kitchen Strip'
         self.add_trigger('report.158d000200a020.status.click', self.toggle_strip)
         self.add_trigger('report.158d000200a020.status.double_click', self.toggle_light)

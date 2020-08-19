@@ -1,8 +1,8 @@
 from homedaemon.scenes import BaseScene
 
 class Scene(BaseScene):
-    def __init__(self,sid, daemon):
-        super().__init__(sid, daemon)
+    def __init__(self,sid:str):
+        super().__init__(sid)
         self.name = 'good night'
         self.place = 'All'
     

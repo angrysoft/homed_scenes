@@ -3,8 +3,8 @@ from homedaemon.scenes import Time, TimeRange
 
 
 class Scene(BaseAutomation):
-    def __init__(self, sid, daemon):
-        super().__init__(sid, daemon)
+    def __init__(self, sid:str):
+        super().__init__(sid)
         self.name = 'hall motion'
         self.add_trigger('report.158d00029a49ba.status.motion', self.on_motion)
         self.add_trigger('report.158d00029a49ba.no_motion.120', self.on_no_motion)
