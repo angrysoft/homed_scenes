@@ -36,7 +36,7 @@ class Scene(BaseAutomation):
     
     def lamp_toggle(self):
         # self.lamp = self.get_device('235444403')
-        self.lamp = self.get_device('0x0000000007e7bae0') 
+        self.lamp = self.get_device('0x0000000007e7bae0')
         if self.lamp:
             self.lamp.toggle()
             # if self.lamp.is_on:
