@@ -1,3 +1,4 @@
+from os import lseek
 from homedaemon.scenes import BaseAutomation
 
 class Scene(BaseAutomation):
@@ -6,7 +7,7 @@ class Scene(BaseAutomation):
         self.name = 'Light Switch'
         self.add_trigger('report.158d00033ef2d8.status.long_click_press', self.off_others)
         self.add_trigger('report.158d00033ef2d8.status.click', self.lamp_toggle)
-        # self.add_trigger('report.158d00033ef2d8.status.double_click', self.toggle_bright)
+        self.add_trigger('report.158d00033ef2d8.status.double_click', self.toggle_bright)
         self.place = 'Bedroom'
     
     def off_others(self):
@@ -35,12 +36,12 @@ class Scene(BaseAutomation):
         print('off everything')
     
     def lamp_toggle(self):
-        # self.lamp = self.get_device('235444403')
-        self.lamp = self.get_device('0x0000000007e7bae0')
+        self.lamp = self.get_device('235444403')
+        # self.lamp = self.get_device('0x0000000007e7bae0')
         if self.lamp:
             self.lamp.toggle()
-            # if self.lamp.is_on:
-                # self.lamp.set_bricct(1,1)
+            if self.lamp.is_on:
+                self.lamp.set_bricct(1,1)
     
     def toggle_bright(self):
         self.lamp = self.get_device('235444403') 
