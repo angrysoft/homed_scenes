@@ -10,10 +10,10 @@ class Scene(BaseAutomation):
     def toggle_light(self):
         self.kitchen_lamp = self.get_device('158d0002bffe5a')
         if self.kitchen_lamp:
-            self.kitchen_lamp.channel_0.toggle()
-            self.kitchen_lamp.channel_1.off()
+            self.kitchen_lamp.on('left')
+            self.kitchen_lamp.off('right')
         
     def toggle_strip(self):
         self.strip_switch = self.get_device('158d00027d0065')
         if self.strip_switch:
-            self.strip_switch.power.toggle()
+            self.strip_switch.toggle()
