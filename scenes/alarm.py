@@ -1,4 +1,5 @@
 from homedaemon.scenes import BaseAutomation
+import os
 
 class Scene(BaseAutomation):
     def __init__(self,sid):
@@ -15,9 +16,9 @@ class Scene(BaseAutomation):
     def log(self):
         self.logger.debug('Alarm triggerd')
         
-    
-    
     def alarm_fired(self):
+        if not os.path.exists('/etc/angryghome/armed'):
+            return
         dev_to_off = ['158d00024e2e5b',
                       '158d00027d0065', 
                       '158d000283b219',
