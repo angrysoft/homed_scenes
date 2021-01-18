@@ -16,8 +16,6 @@ class Scene(BaseAutomation):
     def log(self):
         self.logger.debug('Alarm triggerd')
         
-    
-    
     def alarm_fired(self):
         if not os.path.exists('/etc/angryghome/armed'):
             return
