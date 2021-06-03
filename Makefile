@@ -1,8 +1,8 @@
 
 install:
-	install -d $(DESTDIR)/etc/angryhome/scenes
-	install -d $(DESTDIR)/etc/angryhome/conf.d
-	cp -v scenes/*.py $(DESTDIR)/etc/angryhome/scenes
+	install -d $(DESTDIR)/etc/homedaemon/scenes
+	install -d $(DESTDIR)/etc/homedaemon/conf.d
+	cp -v scenes/*.py $(DESTDIR)/etc/homedaemon/scenes
 
 uninstall:
-	rm -rvf $(DESTDIR)/etc/angryhome/scenes
+	rm -rvf $(DESTDIR)/etc/homedaemon/scenes
