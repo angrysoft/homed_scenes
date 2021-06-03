@@ -19,13 +19,13 @@ class Scene(BaseAutomation):
     
     def fun_on(self):
         self.wallsw = self.get_device('158d0002abac97')
-        if self.wallsw.channel_1.is_on():
-            self.wallsw.channel_0.on()
+        if self.wallsw.is_on('right'):
+            self.wallsw.on('left')
     
     def fun_off(self):
         self.wallsw = self.get_device('158d0002abac97')
-        if self.wallsw.channel_1.is_off():
-            self.wallsw.channel_0.off()
+        if self.wallsw.is_off('right'):
+            self.wallsw.off('left')
             self.switch = self.get_device('1000b6063e')
             self.switch.off()
     
