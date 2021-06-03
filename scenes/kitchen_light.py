@@ -14,6 +14,7 @@ class Scene(BaseAutomation):
             self.kitchen_lamp.off('right')
         
     def toggle_strip(self):
+        print('exec toogle')
         self.strip_switch = self.get_device('0x00158d00027d0065')
         if self.strip_switch:
             self.strip_switch.toggle()

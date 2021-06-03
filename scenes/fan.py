@@ -4,8 +4,10 @@ class Scene(BaseAutomation):
     def __init__(self,sid:str):
         super().__init__(sid)
         self.name = 'Bathroom fan'
-        self.add_trigger('report.158d0002abac97.channel_1.on', self.on_on)
-        self.add_trigger('report.158d0002abac97.channel_1.off', self.on_off)
+        # event loop death
+        # self.add_trigger('report.0x00158d0002abac97.right.ON', self.on_on)
+        # self.add_trigger('report.0x00158d0002abac97.right.OFF', self.on_off)
+        # self._timer_on = RunAfter(240, self.fun_on)
         self._timer_on = RunAfter(240, self.fun_on)
         self._timer_off = RunAfter(5, self.fun_off)
 
@@ -18,15 +20,15 @@ class Scene(BaseAutomation):
         self._timer_off.wait()
     
     def fun_on(self):
-        self.wallsw = self.get_device('158d0002abac97')
+        self.wallsw = self.get_device('0x00158d0002abac97')
         if self.wallsw.is_on('right'):
             self.wallsw.on('left')
     
     def fun_off(self):
-        self.wallsw = self.get_device('158d0002abac97')
+        self.wallsw = self.get_device('0x00158d0002abac97')
         if self.wallsw.is_off('right'):
             self.wallsw.off('left')
-            self.switch = self.get_device('1000b6063e')
-            self.switch.off()
+            # self.switch = self.get_device('1000b6063e')
+            # self.switch.off()
     
         

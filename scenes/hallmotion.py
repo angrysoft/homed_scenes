@@ -1,5 +1,6 @@
 from homedaemon.scenes import BaseAutomation
-from homedaemon.scenes import Time, TimeRange
+from homedaemon.scenes import TimeRange
+from pyiot.software import Time
 
 
 class Scene(BaseAutomation):
@@ -11,10 +12,8 @@ class Scene(BaseAutomation):
     
     def on_motion(self):
         clock = self.get_device('clock')
-        sunrise = Time(time_str=clock.sunrise)
-        sunset = Time(time_str=clock.sunset)
-        _range = TimeRange(sunset, sunrise)
-        _now = self.now()
+        _range = TimeRange(clock.sunset, clock.sunrise)
+        _now = Time().set_now()
         if _now in _range:
             entrance = self.get_device('158d0002b74c28')
             wallsw = self.get_device('158d0002a18c2b')
@@ -26,7 +25,7 @@ class Scene(BaseAutomation):
                 wallsw.channel_0.off()
                 self.sleep(10)
                 wallsw.channel_1.off()
-            elif _now in TimeRange(Time(23), sunrise) and lamp.is_on:
+            elif _now in TimeRange(Time(23), clock.sunrise) and lamp.is_on:
                 return
             else:
                 wallsw.channel_1.on()
