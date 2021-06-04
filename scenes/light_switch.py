@@ -1,40 +1,33 @@
-from os import lseek
 from homedaemon.scenes import BaseAutomation
 
 class Scene(BaseAutomation):
     def __init__(self,sid:str):
         super().__init__(sid)
         self.name = 'Light Switch'
-        self.add_trigger('report.158d00033ef2d8.status.long_click_press', self.off_others)
-        self.add_trigger('report.158d00033ef2d8.status.click', self.lamp_toggle)
-        self.add_trigger('report.158d00033ef2d8.status.double_click', self.toggle_bright)
+        self.add_trigger('report.0x00158d00033ef2d8.click.long', self.off_others)
+        self.add_trigger('report.0x00158d00033ef2d8.click.sindle', self.lamp_toggle)
+        self.add_trigger('report.0x00158d00033ef2d8.click.double', self.toggle_bright)
         self.place = 'Bedroom'
     
     def off_others(self):
-        dev_to_off = ['158d00024e2e5b',
-                      '158d00027d0065', 
+        dev_to_off = ['0x00158d00024e2e5b',
+                      '0x00158d00027d0065', 
                     #   '158d000283b219',
-                      '158d00029b1929',
-                      '158d0002a16338',
-                      '158d0002a18c2b',
-                      '158d0002abac97',
-                      '158d0002bffe5a',
-                    #   'rgb01',
+                      '0x00158d00029b1929',
+                      '0x00158d0002a16338',
+                      '0x00158d0002a18c2b',
+                      '0x00158d0002abac97',
+                      '0x00158d0002bffe5a',
                       '0x0000000007e7bae0']
         
         for _sid in dev_to_off:
             dev = self.get_device(_sid)
-            if dev.model == 'plug':
-                dev.power.off()
-            elif dev.model == 'ctrl_neutral2':
-                dev.channel_0.off()
-                dev.channel_1.off()
-            elif dev.model == 'ctrl_neutral1':
-                dev.channel_0.off()
-            elif dev.model in ('bslamp1', 'color', 'rgbstrip', 'bravia'):
+            if dev.status.model == 'ctrl_neutral2':
+                dev.off('left')
+                dev.off('right')
+            else:
                 dev.off()
-        print('off everything')
-    
+       
     def lamp_toggle(self):
         self.lamp = self.get_device('235444403')
         # self.lamp = self.get_device('0x0000000007e7bae0')
