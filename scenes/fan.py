@@ -5,10 +5,10 @@ class Scene(BaseAutomation):
         super().__init__(sid)
         self.name = 'Bathroom fan'
         # event loop death
-        # self.add_trigger('report.0x00158d0002abac97.right.ON', self.on_on)
-        # self.add_trigger('report.0x00158d0002abac97.right.OFF', self.on_off)
+        self.add_trigger('report.0x00158d0002abac97.right.ON', self.on_on)
+        self.add_trigger('report.0x00158d0002abac97.right.OFF', self.on_off)
         # self._timer_on = RunAfter(240, self.fun_on)
-        self._timer_on = RunAfter(240, self.fun_on)
+        self._timer_on = RunAfter(5, self.fun_on)
         self._timer_off = RunAfter(5, self.fun_off)
 
     def on_on(self):
