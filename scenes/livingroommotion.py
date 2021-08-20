@@ -13,12 +13,8 @@ class Scene(BaseAutomation):
     def on_motion(self):
         print('coś sie rusza')
         lamp = self.get_device('0x0000000007e7bae0')
-        clock = self.get_device('clock')
-        _range = TimeRange(clock.status.sunset, clock.status.sunrise)
-        _now = Time()
-        _now.set_now()
-        print(_now, clock.status.sunrise, clock.status.sunset)
-        if _now in _range:
+        light = self.get_device('0x04cf8cdf3c8a0236')
+        if int(light.status.illuminance) < 8000:
             lamp.on()
         else:
             lamp.off()

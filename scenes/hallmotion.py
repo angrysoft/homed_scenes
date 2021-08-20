@@ -7,32 +7,25 @@ class Scene(BaseAutomation):
     def __init__(self, sid:str):
         super().__init__(sid)
         self.name = 'hall motion'
-        self.add_trigger('report.158d00029a49ba.occupancy.ble', self.on_motion)
+        self.add_trigger('report.158d00029a49ba.occupancy.true', self.on_motion)
         self.add_trigger('report.158d00029a49ba.occupancy.false', self.on_no_motion)
     
     def on_motion(self):
-        clock = self.get_device('clock')
-        _range = TimeRange(clock.sunset, clock.sunrise)
-        _now = Time().set_now()
-        if _now in _range:
+        light = self.get_device('0x04cf8cdf3c8a0236')
+        if int(light.status.illuminance) < 8000:
             entrance = self.get_device('158d0002b74c28')
             wallsw = self.get_device('158d0002a18c2b')
             lamp = self.get_device('0x0000000007e7bae0')
-            if entrance.status == 'open':
-                wallsw.on()
+            if entrance.status.status == 'false':
                 lamp.on()
-                self.sleep(25)
-                wallsw.channel_0.off()
-                self.sleep(10)
-                wallsw.channel_1.off()
-            elif _now in TimeRange(Time(23), clock.sunrise) and lamp.is_on:
-                return
+                wallsw.on("left")
             else:
-                wallsw.channel_1.on()
-                self.sleep(25)
-                wallsw.channel_1.off()
+                pass
+                #  on bubl
+                # if is after 21 dimm bulb
+
                 
     def on_no_motion(self):
         wallsw = self.get_device('158d0002a18c2b')
-        wallsw.channel_0.off()
-        wallsw.channel_1.off()
+        wallsw.off("left")
+        wallsw.off("right")
