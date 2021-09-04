@@ -4,9 +4,9 @@ class Scene(BaseAutomation):
     def __init__(self,sid:str):
         super().__init__(sid)
         self.name = 'Light Switch'
-        self.add_trigger('report.0x00158d00033ef2d8.click.long', self.off_others)
-        self.add_trigger('report.0x00158d00033ef2d8.click.single', self.lamp_toggle)
-        self.add_trigger('report.0x00158d00033ef2d8.click.double', self.toggle_bright)
+        self.add_trigger('report.0x00158d00033ef2d8.action.long', self.off_others)
+        self.add_trigger('report.0x00158d00033ef2d8.action.single', self.lamp_toggle)
+        self.add_trigger('report.0x00158d00033ef2d8.action.double', self.toggle_bright)
         self.place = 'Bedroom'
     
     def off_others(self):

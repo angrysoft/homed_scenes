@@ -7,8 +7,8 @@ class Scene(BaseAutomation):
         # event loop death
         self.add_trigger('report.0x00158d0002abac97.right.ON', self.on_on)
         self.add_trigger('report.0x00158d0002abac97.right.OFF', self.on_off)
-        self.add_trigger('report.0x00124b0022ec93cf.occupancy.true', self.on_movement)
-        self.add_trigger('report.0x00124b0022ec93cf.occupancy.false', self.on_no_movement)
+        self.add_trigger('report.0x00124b0022ec93cf.occupancy.True', self.on_movement)
+        self.add_trigger('report.0x00124b0022ec93cf.occupancy.False', self.on_no_movement)
         self._timer_on = RunAfter(240, self.fun_on)
         self._timer_off = RunAfter(5, self.fun_off)
     
