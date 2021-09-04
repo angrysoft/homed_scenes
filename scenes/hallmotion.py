@@ -26,4 +26,3 @@ class Scene(BaseAutomation):
     def on_no_motion(self):
         wallsw = self.get_device('158d0002a18c2b')
         wallsw.off("left")
-        wallsw.off("right")

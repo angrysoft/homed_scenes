@@ -11,7 +11,6 @@ class Scene(BaseAutomation):
         self.place = 'Living room'
     
     def on_motion(self):
-        print('coś sie rusza')
         lamp = self.get_device('0x0000000007e7bae0')
         light = self.get_device('0x04cf8cdf3c8a0236')
         if int(light.status.illuminance) < 8000:
