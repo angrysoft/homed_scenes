@@ -19,7 +19,7 @@ class Scene(BaseAutomation):
     def alarm_fired(self):
         if not os.path.exists('/etc/angryghome/armed'):
             return
-        dev_to_off = ['158d00024e2e5b',
+        dev_to_on = ['158d00024e2e5b',
                       '158d00027d0065', 
                       '158d000283b219',
                       '158d00029b1929',
@@ -29,7 +29,7 @@ class Scene(BaseAutomation):
                       '158d0002bffe5a',
                       '0x0000000007e7bae0']
         
-        for _sid in dev_to_off:
+        for _sid in dev_to_on:
             dev = self.get_device(_sid)
             if dev.model == 'plug':
                 dev.power.on()

@@ -22,7 +22,9 @@ class Scene(BaseAutomation):
         
         for _sid in dev_to_off:
             dev = self.get_device(_sid)
-            if dev.status.model == 'ctrl_neutral2':
+            if _sid == '0x00158d0002a18c2b':
+                dev.off('left')
+            elif dev.status.model == 'ctrl_neutral2':
                 dev.off('left')
                 dev.off('right')
             else:

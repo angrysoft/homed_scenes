@@ -1,6 +1,4 @@
 from homedaemon.scenes import BaseAutomation
-from homedaemon.scenes import TimeRange
-from pyiot.software import Time
 
 
 class Scene(BaseAutomation):
