@@ -21,9 +21,7 @@ class Scene(BaseAutomation):
         wallsw = self.get_device('0x00158d0002abac97')
         if wallsw.is_on('right'):
             wallsw.off('right')
-        light_switch = self.get_device('1000b6063e')
-        if light_switch.is_on():
-            light_switch.off()
+        
 
     def on_on(self):
         self._timer_off.cancel()
@@ -40,9 +38,13 @@ class Scene(BaseAutomation):
     
     def fun_off(self):
         wallsw = self.get_device('0x00158d0002abac97')
-        if wallsw.is_off('right'):
-            if wallsw.is_on('left'):
-                wallsw.off('left')
+        if wallsw.is_off('right') and wallsw.is_on('left'):
+            wallsw.off('left')
+        
+        light_switch = self.get_device('1000b6063e')
+        if light_switch.is_on():
+            light_switch.off()
+
             
     
         
