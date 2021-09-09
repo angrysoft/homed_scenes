@@ -13,7 +13,7 @@ class Scene(BaseAutomation):
     def on_motion(self):
         lamp = self.get_device('0x0000000007e7bae0')
         light = self.get_device('0x04cf8cdf3c8a0236')
-        if int(light.status.illuminance) < 8000:
+        if int(light.status.illuminance) < 9500:
             lamp.on()
         else:
             lamp.off()
