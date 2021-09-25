@@ -6,7 +6,7 @@ class Scene(BaseAutomation):
         super().__init__(sid)
         self.name = 'hall motion'
         self.add_trigger('report.158d00029a49ba.occupancy.True', self.on_motion)
-        self.add_trigger('report.158d00029a49ba.no_occupancy_since.60', self.on_no_motion)
+        self.add_trigger('report.158d00029a49ba.no_occupancy_since.120', self.on_no_motion)
     
     def on_motion(self):
         light = self.get_device('0x04cf8cdf3c8a0236')
