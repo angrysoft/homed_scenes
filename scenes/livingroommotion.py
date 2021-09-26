@@ -8,7 +8,7 @@ class Scene(BaseAutomation):
         self.name = 'Livingroom motion'
         self.add_trigger('report.0x00158d0002ec2fa6.occupancy.True', self.on_motion)
         self.add_trigger('report.0x0000000007e7bae0.power.on', self.on_power_on)
-        self.add_trigger('report.0x00158d0002ec2fa6.no_occupancy_since.240', self.power_off)
+        self.add_trigger('report.0x00158d0002ec2fa6.no_occupancy_since.900', self.power_off)
         self.place = 'Living room'
     
     def on_motion(self):
