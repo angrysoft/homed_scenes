@@ -5,14 +5,14 @@ class Scene(BaseAutomation):
     def __init__(self, sid:str):
         super().__init__(sid)
         self.name = 'hall motion'
-        self.add_trigger('report.158d00029a49ba.occupancy.True', self.on_motion)
-        self.add_trigger('report.158d00029a49ba.no_occupancy_since.120', self.on_no_motion)
+        self.add_trigger('report.0x00158d00029a49ba.occupancy.True', self.on_motion)
+        self.add_trigger('report.0x00158d00029a49ba.no_occupancy_since.120', self.on_no_motion)
     
     def on_motion(self):
         light = self.get_device('0x04cf8cdf3c8a0236')
         if int(light.status.illuminance) < 8000:
-            entrance = self.get_device('158d0002b74c28')
-            wallsw = self.get_device('158d0002a18c2b')
+            entrance = self.get_device('0x00158d0002b74c28')
+            wallsw = self.get_device('0x00158d0002a18c2b')
             lamp = self.get_device('0x0000000007e7bae0')
             if entrance.status.status == 'false':
                 lamp.on()
@@ -24,5 +24,5 @@ class Scene(BaseAutomation):
 
                 
     def on_no_motion(self):
-        wallsw = self.get_device('158d0002a18c2b')
+        wallsw = self.get_device('0x00158d0002a18c2b')
         wallsw.off("left")
