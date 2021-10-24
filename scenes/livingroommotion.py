@@ -24,15 +24,28 @@ class Scene(BaseAutomation):
         lamp.off()
     
     def on_power_on(self):
+        self.set_lamp()
+
+    def set_lamp(self):
         lamp = self.get_device('0x0000000007e7bae0')
-        clock = self.get_device('clock')
-        _range = TimeRange(Time(23), clock.status.sunrise)
+      
         _now = Time()
         _now.set_now()
-        if _now in _range:
-            lamp.set_bright(1)
-            lamp.set_ct_pc(0)
-        else:
-            lamp.set_bright(30)
-            lamp.set_ct_pc(50)
+
+        bright = 30
+        ct = 50
+
+        if _now >= Time(21) and _now < Time(22):
+            bright = 17
+            ct = 17
+        elif _now >= Time(22) and _now < Time(23):
+            bright = 10
+            ct = 10
+        elif _now >= Time(23) and _now < Time(6):
+            bright = 1
+            ct = 1
+
+        if lamp.is_on():
+            lamp.set_bright(bright)
+            lamp.set_ct_pc(ct)
             
