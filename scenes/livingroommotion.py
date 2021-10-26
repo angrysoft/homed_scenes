@@ -16,8 +16,10 @@ class Scene(BaseAutomation):
     def on_motion(self):
         lamp = self.get_device('0x0000000007e7bae0')
         light = self.get_device('0x04cf8cdf3c8a0236')
-        now = Time().set_now()
-        if int(light.status.illuminance) < 9500 and now < Time(23):
+        _now = Time()
+        _now = _now.set_now()
+        print(_now)
+        if int(light.status.illuminance) < 9500 and _now < Time(23):
             lamp.on()
         else:
             lamp.off()
@@ -44,7 +46,7 @@ class Scene(BaseAutomation):
         elif _now >= Time(22) and _now < Time(23):
             bright = 10
             ct = 10
-        elif _now >= Time(23) and _now < Time(6):
+        elif _now >= Time(23) or _now < Time(6):
             bright = 1
             ct = 1
 
