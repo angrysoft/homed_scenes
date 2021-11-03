@@ -14,7 +14,7 @@ class Scene(BaseAutomation):
             entrance = self.get_device('0x00158d0002b74c28')
             wallsw = self.get_device('0x00158d0002a18c2b')
             lamp = self.get_device('0x0000000007e7bae0')
-            if entrance.status.status == 'false':
+            if entrance.status.contact == 'false':
                 lamp.on()
                 wallsw.on("left")
             else:
