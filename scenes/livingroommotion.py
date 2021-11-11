@@ -5,6 +5,9 @@ class Scene(BaseAutomation):
     def __init__(self,sid:str):
         super().__init__(sid)
         self.name = 'Livingroom motion'
+        self.add_trigger('report.0x00158d0002a13819.contact.False', self.on_door_open)
+        self.add_trigger('report.0x00158d0002a13819.contact.True', self.on_door_close)
+
         self.add_trigger('report.0x00158d0002ec2fa6.occupancy.True', self.on_motion)
         self.add_trigger('report.0x0000000007e7bae0.power.on', self.on_power_on)
         self.add_trigger('report.clock.time.21.00.00', self.on_power_on)
@@ -51,3 +54,13 @@ class Scene(BaseAutomation):
             lamp.set_bright(bright)
             lamp.set_ct_pc(ct)
             
+    def on_door_open(self):
+        light = self.get_device('0x04cf8cdf3c8a0236')
+        lamp = self.get_device('1000b6e1c8')
+        if int(light.status.illuminance) < 7000:
+            lamp.on()
+    
+    def on_door_close(self):
+        lamp = self.get_device('1000b6e1c8')
+        if lamp.is_on():
+            lamp.off()
