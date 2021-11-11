@@ -23,11 +23,13 @@ class Scene(BaseAutomation):
 
 
             _now = Time.get_time_now()
-
-            if _now >= Time(22) and lamp.is_off():
+            bright = 40
+            if _now >= Time(22):
+                bright = 1
+            if  lamp.is_off():
                 bulb = self.get_device("0x0000000013f0bc44")
                 bulb.on()
-                bulb.set_bright(17)
+                bulb.set_bright(bright)
             
                 
     def on_no_motion(self):
