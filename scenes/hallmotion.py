@@ -7,8 +7,8 @@ class Scene(BaseAutomation):
         super().__init__(sid)
         self.name = 'hall motion'
         self.add_trigger('report.0x00158d00029a49ba.occupancy.True', self.on_motion)
-        
-        self.add_trigger('report.0x00158d00029a49ba.no_occupancy_since.60', self.on_no_motion)
+        self.add_trigger('report.0x00158d00029a49ba.occupancy.False', self.on_no_motion)
+        # self.add_trigger('report.0x00158d00029a49ba.no_occupancy_since.120', self.on_no_motion)
         self.add_trigger('report.0x00158d0002a18c2b.action.release_right', self.bulb_on)
     
     def on_motion(self):
@@ -24,7 +24,7 @@ class Scene(BaseAutomation):
 
             _now = Time.get_time_now()
             bright = 40
-            if _now >= Time(22):
+            if _now >= Time(21):
                 bright = 1
             if  lamp.is_off():
                 bulb = self.get_device("0x0000000013f0bc44")

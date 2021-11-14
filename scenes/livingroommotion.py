@@ -20,7 +20,7 @@ class Scene(BaseAutomation):
         lamp = self.get_device('0x0000000007e7bae0')
         light = self.get_device('0x04cf8cdf3c8a0236')
         
-        if int(light.status.illuminance) < 9500 and Time.get_time_now() < Time(23):
+        if int(light.status.illuminance) < 9500: # and Time.get_time_now() < Time(23):
             lamp.on()
         else:
             lamp.off()

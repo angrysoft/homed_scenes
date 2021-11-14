@@ -10,7 +10,7 @@ class Scene(BaseAutomation):
         self.add_trigger('report.0x00124b0022ec93cf.occupancy.False', self.on_no_movement)
         self._timer_on = RunAfter(240, self.fun_on)
         self._timer_off = RunAfter(5, self.fun_off)
-        self._timer_on_no_movement = RunAfter(30, self.off_light)
+        self._timer_on_no_movement = RunAfter(120, self.off_light)
     
     def on_movement(self):
         wallsw = self.get_device('0x00158d0002abac97')
