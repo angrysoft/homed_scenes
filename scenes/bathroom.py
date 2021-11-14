@@ -12,20 +12,21 @@ class Scene(BaseAutomation):
         self.add_trigger('report.0x00124b0022431c36.contact.True', self.on_door_close)
         self._timer_on = RunAfter(240, self.fun_on)
         self._timer_off = RunAfter(5, self.fun_off)
-        # self._timer_on_no_movement = RunAfter(120, self.off_light)
+        self._timer_on_no_movement = RunAfter(60, self.off_light)
         self.bath_occupancy = False
     
     def on_movement(self):
+        self.bath_occupancy = True
+
         wallsw = self.get_device('0x00158d0002abac97')
         if wallsw.is_off('right'):
             wallsw.on('right')
         
-        # self._timer_on_no_movement.cancel()
+        self._timer_on_no_movement.cancel()
     
     def on_no_movement(self):
-        # self._timer_on_no_movement.wait()
         if not self.bath_occupancy:
-            self.off_light()
+            self._timer_on_no_movement.wait()
 
     def off_light(self):
         wallsw = self.get_device('0x00158d0002abac97')
@@ -37,9 +38,7 @@ class Scene(BaseAutomation):
             self.off_light()
             self.bath_occupancy = False
         else:
-            movement_sensor = self.get_device("0x00124b0022ec93cf")
-            if movement_sensor.status.occupancy:
-                self.bath_occupancy = True
+            self.bath_occupancy = True
         
         
     def on_on(self):
