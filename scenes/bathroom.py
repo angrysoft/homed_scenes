@@ -16,27 +16,25 @@ class Scene(BaseAutomation):
         self.bath_occupancy = False
     
     def on_movement(self):
-        self.bath_occupancy = True
         self._timer_on_no_movement.cancel()
     
     def on_no_movement(self):
-        if not self.bath_occupancy:
-            self._timer_on_no_movement.wait()
+        self._timer_on_no_movement.wait()
 
     def off_light(self):
         wallsw = self.get_device('0x00158d0002abac97')
         if wallsw.is_on('right'):
             wallsw.off('right')
 
-    def on_door_open(self):
-        self.bath_occupancy = True
-        self.on_light()
 
     def on_light(self):
         wallsw = self.get_device('0x00158d0002abac97')
         if wallsw.is_off('right'):
             wallsw.on('right')
 
+    def on_door_open(self):
+        self.on_light()
+        
     def on_door_close(self):
         if (self.bath_occupancy):
             self.off_light()
