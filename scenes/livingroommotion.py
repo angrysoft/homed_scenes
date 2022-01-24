@@ -8,7 +8,6 @@ class Scene(BaseAutomation):
         self.name = 'Livingroom motion'
         self.add_trigger('report.0x00158d0002a13819.contact.False', self.on_door_open)
         self.add_trigger('report.0x00158d0002a13819.contact.True', self.on_door_close)
-
         self.add_trigger('report.0x00158d0002ec2fa6.occupancy.True', self.on_motion)
         self.add_trigger('report.0x0000000007e7bae0.power.on', self.on_power_on)
         self.add_trigger('report.clock.time.21.00.00', self.on_power_on)
@@ -22,6 +21,7 @@ class Scene(BaseAutomation):
         light = self.get_device('0x04cf8cdf3c8a0236')
         if os.path.exists("/etc/homedaemon/lamp_disable"):
             return
+            
         if int(light.status.illuminance) < 9500: # and Time.get_time_now() < Time(23):
             lamp.on()
         else:
