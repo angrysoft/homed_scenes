@@ -6,7 +6,7 @@ class Scene(BaseAutomation):
         self.name = 'Bathroom events'
         self.add_trigger('report.0x00158d0002abac97.right.ON', self.on_on)
         self.add_trigger('report.0x00158d0002abac97.right.OFF', self.on_off)
-        self.add_trigger('report.0x00158d0002abac97.action.release_right', self.on_release_right)
+        # self.add_trigger('report.0x00158d0002abac97.action.release_right', self.on_release_right)
         self.add_trigger('report.0x00124b0022ec93cf.occupancy.True', self.on_movement)
         self.add_trigger('report.0x00124b0022ec93cf.occupancy.False', self.on_no_movement)
         self.add_trigger('report.0x00124b0022431c36.contact.False', self.on_door_open)
@@ -44,7 +44,7 @@ class Scene(BaseAutomation):
             self.on_light()
         
     def on_door_close(self):
-        if (self.bath_occupancy):
+        if self.bath_occupancy:
             self.off_light()
         self.toggle_occupancy()
         
