@@ -6,7 +6,7 @@ class Scene(BaseAutomation):
         self.name = 'Bathroom events'
         self.add_trigger('report.0x00158d0002abac97.right.ON', self.on_on)
         self.add_trigger('report.0x00158d0002abac97.right.OFF', self.on_off)
-        # self.add_trigger('report.0x00158d0002abac97.action.release_right', self.on_release_right)
+        self.add_trigger('report.0x00158d0002abac97.action.release_right', self.on_release_right)
         self.add_trigger('report.0x00124b0022ec93cf.occupancy.True', self.on_movement)
         self.add_trigger('report.0x00124b0022ec93cf.occupancy.False', self.on_no_movement)
         self.add_trigger('report.0x00124b0022431c36.contact.False', self.on_door_open)
@@ -19,7 +19,8 @@ class Scene(BaseAutomation):
     
     def on_release_right(self):
         wallsw = self.get_device("0x00158d0002abac97")
-        self.bath_occupancy = wallsw.is_on("right")
+        if wallsw.is_off("right"):
+            self.bath_occupancy = False
 
     def on_movement(self):
         self._timer_on_no_movement.cancel()
