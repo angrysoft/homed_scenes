@@ -8,7 +8,7 @@ class Scene(BaseAutomation):
         self.add_trigger('report.0x00158d00033ef2d8.action.single', self.lamp_toggle)
         self.add_trigger('report.0x00158d00033ef2d8.action.double', self.toggle_bright)
         self.place = 'Bedroom'
-    
+
     def off_others(self):
         dev_to_off = ['0x00158d00024e2e5b',
                       '0x00158d00027d0065', 
@@ -23,14 +23,19 @@ class Scene(BaseAutomation):
         
         for _sid in dev_to_off:
             dev = self.get_device(_sid)
-            if _sid == '0x00158d0002a18c2b':
-                dev.off('left')
-            elif dev.status.model == 'ctrl_neutral2':
-                dev.off('left')
-                dev.off('right')
-            else:
-                dev.off()
-       
+            if dev is None:
+                continue
+            try:
+                if _sid == '0x00158d0002a18c2b':
+                    dev.off('left')
+                elif dev.status.model == 'ctrl_neutral2':
+                    dev.off('left')
+                    dev.off('right')
+                else:
+                    dev.off()
+            except Exception:
+                print(f'device {_sid}')
+
     def lamp_toggle(self):
         self.lamp = self.get_device('235444403')
         # self.lamp = self.get_device('0x0000000007e7bae0')

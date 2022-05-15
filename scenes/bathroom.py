@@ -1,7 +1,7 @@
 from homedaemon.scenes import BaseAutomation, RunAfter
 
 class Scene(BaseAutomation):
-    def __init__(self,sid:str):
+    def __init__(self, sid: str):
         super().__init__(sid)
         self.name = 'Bathroom events'
         self.add_trigger('report.0x00158d0002abac97.right.ON', self.on_on)
@@ -16,7 +16,7 @@ class Scene(BaseAutomation):
         self._timer_off = RunAfter(5, self.fun_off)
         self._timer_on_no_movement = RunAfter(60, self.off_light)
         self.bath_occupancy = False
-    
+
     def on_release_right(self):
         wallsw = self.get_device("0x00158d0002abac97")
         if wallsw.is_off("right"):
@@ -26,7 +26,7 @@ class Scene(BaseAutomation):
         self._timer_on_no_movement.cancel()
         if self.bath_occupancy:
             self.on_light()
-    
+
     def on_no_movement(self):
         self._timer_on_no_movement.wait()
 
@@ -43,12 +43,11 @@ class Scene(BaseAutomation):
     def on_door_open(self):
         if not self.bath_occupancy:
             self.on_light()
-        
+
     def on_door_close(self):
         if self.bath_occupancy:
             self.off_light()
         self.toggle_occupancy()
-        
 
     def toggle_occupancy(self):
         if (self.bath_occupancy):
@@ -59,25 +58,21 @@ class Scene(BaseAutomation):
     def on_on(self):
         self._timer_off.cancel()
         self._timer_on.wait()
-        
+
     def on_off(self):
         self._timer_on.cancel()
         self._timer_off.wait()
-    
+
     def fun_on(self):
         wallsw = self.get_device('0x00158d0002abac97')
         if wallsw.is_on('right'):
             wallsw.on('left')
-    
+
     def fun_off(self):
         wallsw = self.get_device('0x00158d0002abac97')
         if wallsw.is_off('right') and wallsw.is_on('left'):
             wallsw.off('left')
-        
+
         light_switch = self.get_device('1000b6063e')
         if light_switch.is_on():
             light_switch.off()
-
-            
-    
-        
