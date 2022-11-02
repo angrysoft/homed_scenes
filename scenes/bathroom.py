@@ -14,7 +14,7 @@ class Scene(BaseAutomation):
 
         self._timer_on = RunAfter(240, self.fun_on)
         self._timer_off = RunAfter(5, self.fun_off)
-        self._timer_on_no_movement = RunAfter(60, self.off_light)
+        self._timer_on_no_movement = RunAfter(120, self.off_light)
         self.bath_occupancy = False
 
     def on_release_right(self):
