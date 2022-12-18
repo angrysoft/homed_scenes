@@ -11,4 +11,4 @@ class Scene(BaseAutomation):
 
     def lamp_tree_toggle(self):
         if self.lamp_tree := self.get_device("0x00158d000283b219")
-            self.lamp.toggle()
+            self.lamp_tree.toggle()

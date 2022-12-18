@@ -6,3 +6,5 @@ install:
 
 uninstall:
 	rm -rvf $(DESTDIR)/etc/homedaemon/scenes
+
+reinstall: uninstall install
