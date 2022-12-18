@@ -4,7 +4,7 @@ from homedaemon.scenes import BaseAutomation
 class Scene(BaseAutomation):
     def __init__(self, sid: str):
         super().__init__(sid)
-        self.name = "Kitchen Strip"
+        self.name = "Button"
         self.add_trigger("report.0x00124b001f4502db.action.single", self.toggle_strip)
         # self.add_trigger("report.0x00158d000200a020.action.single", self.toggle_strip)
         self.add_trigger("report.0x00158d000200a020.action.double", self.toggle_light)
