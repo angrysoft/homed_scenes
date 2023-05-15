@@ -1,0 +1,18 @@
+{
+    "sid": "bedroom_button_hold",
+    "type": "actionHandler",
+    "trigger": "status.0x00158d000200a020.action.hold",
+    "conditions": [],
+    "actions": [
+        {
+            "type": "dispatch",
+            "cmd": "all_lights",
+            "arg": "off"
+        }
+    ],
+    "actionsFalse": [],
+    "name": {
+        "en": "Bedroom button",
+        "pl": ""
+    }
+}

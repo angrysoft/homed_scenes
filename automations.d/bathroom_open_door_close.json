@@ -1,0 +1,48 @@
+{
+    "sid": "bathroom_close_door",
+    "type": "actionHandler",
+    "trigger": "status.0x00124b0022431c36.contact.true",
+    "state": [
+        {
+            "attrName": "occupancy",
+            "attrType": "bool",
+            "attrValue": false
+        }
+    ],
+    "conditions": [
+        {
+            "type": "and",
+            "testCases": [
+                {
+                    "type": "state",
+                    "attrName": "occupancy",
+                    "attrValue": true
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "0x00158d0002abac97",
+            "cmd": "allOff",
+            "arg": null
+        },
+        {
+            "type": "state",
+            "cmd": "occupancy",
+            "arg": false
+        }
+    ],
+    "actionsFalse": [
+        {
+            "type": "state",
+            "cmd": "occupancy",
+            "arg": true
+        }
+    ],
+    "name": {
+        "en": "Bathroom door open",
+        "pl": ""
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "sid": "bathroom_open_door",
+    "type": "actionHandler",
+    "trigger": "status.0x00124b0022431c36.contact.false",
+    "conditions": [],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "0x00158d0002abac97",
+            "cmd": "right",
+            "arg": true
+        }
+    ],
+    "actionsFalse": [],
+    "name": {
+        "en": "Bathroom door open",
+        "pl": ""
+    }
+}

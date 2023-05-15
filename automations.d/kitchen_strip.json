@@ -1,0 +1,19 @@
+{
+    "sid": "kitchen_strip",
+    "type": "actionHandler",
+    "trigger": "status.0x00158d000200a020.action.single",
+    "conditions": [],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "0x00158d00027d0065",
+            "cmd": "toggle",
+            "arg": null
+        }
+    ],
+    "actionsFalse": [],
+    "name": {
+        "en": "Kitchen Strip Toggle",
+        "pl": ""
+    }
+}

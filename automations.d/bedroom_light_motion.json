@@ -1,0 +1,25 @@
+{
+    "sid": "bedroom_light",
+    "type": "actionHandler",
+    "trigger": "status.0x00158d0002ec03fe.no_occupancy_since.120",
+    "conditions": [],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "0x00158d0002a16338",
+            "cmd": "left",
+            "arg": false
+        },
+        {
+            "type": "execute",
+            "sid": "0x00158d0002a16338",
+            "cmd": "right",
+            "arg": false
+        }
+    ],
+    "actionsFalse": [],
+    "name": {
+        "en": "Bedroom no occupancy",
+        "pl": "Sypialnia brak obecności"
+    }
+}

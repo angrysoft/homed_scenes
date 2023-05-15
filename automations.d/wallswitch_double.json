@@ -1,0 +1,18 @@
+{
+    "sid": "wallswitch_double_right",
+    "type": "actionHandler",
+    "trigger": "status.0x00158d0002a18c2b.action.double_right",
+    "conditions": [],
+    "actions": [
+        {
+            "type": "dispatch",
+            "cmd": "all_lights",
+            "arg": "off"
+        }
+    ],
+    "actionsFalse": [],
+    "name": {
+        "en": "WallSwitch button",
+        "pl": ""
+    }
+}

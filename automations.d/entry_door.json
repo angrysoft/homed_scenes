@@ -1,0 +1,43 @@
+{
+    "sid": "entry_door_open",
+    "type": "automation",
+    "trigger": "status.0x00158d00029a49ba.occupancy.true",
+    "conditions": [
+        {
+            "type": "and",
+            "testCases": [
+                {
+                    "type": "lt",
+                    "sid": "0x04cf8cdf3c8a0236",
+                    "attrName": "illuminance",
+                    "attrValue": 8000
+                },
+                {
+                    "type": "status",
+                    "sid": "0x00158d0002b74c28",
+                    "attrName": "contact",
+                    "attrValue": false
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "0x00158d0002a18c2b",
+            "cmd": "left",
+            "arg": true
+        },
+        {
+            "type": "execute",
+            "sid": "0x0000000007e7bae0",
+            "cmd": "on",
+            "arg": null
+        }
+    ],
+    "actionsFalse":[],
+    "name": {
+        "en": "entry_door_open",
+        "pl": ""
+    }
+}

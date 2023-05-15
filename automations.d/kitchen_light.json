@@ -1,0 +1,25 @@
+{
+    "sid": "kitchen_light",
+    "type": "actionHandler",
+    "trigger": "status.0x00158d000200a020.action.double",
+    "conditions": [],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "0x00158d0002bffe5a",
+            "cmd": "toggleLeft",
+            "arg": null
+        },
+        {
+            "type": "execute",
+            "sid": "0x00158d0002bffe5a",
+            "cmd": "right",
+            "arg": false
+        }
+    ],
+    "actionsFalse": [],
+    "name": {
+        "en": "Kitchen Light",
+        "pl": ""
+    }
+}

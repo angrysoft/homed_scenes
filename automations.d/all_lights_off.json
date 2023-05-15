@@ -1,0 +1,61 @@
+{
+    "sid": "all_lights_off",
+    "type": "actionHandler",
+    "trigger": "action.all_lights.off",
+    "conditions": [],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "0x00158d00027d0065",
+            "cmd": "off",
+            "arg": null
+        },
+        {
+            "type": "execute",
+            "sid": "0x00158d00029b1929",
+            "cmd": "allOff",
+            "arg": null
+        },
+        {
+            "type": "execute",
+            "sid": "0x00158d0002a16338",
+            "cmd": "allOff",
+            "arg": null
+        },
+        {
+            "type": "execute",
+            "sid": "0x00158d0002a18c2b",
+            "cmd": "allOff",
+            "arg": null
+        },
+        {
+            "type": "execute",
+            "sid": "0x00158d0002abac97",
+            "cmd": "allOff",
+            "arg": null
+        },
+        {
+            "type": "execute",
+            "sid": "0x00158d0002bffe5a",
+            "cmd": "allOff",
+            "arg": null
+        },
+        {
+            "type": "execute",
+            "sid": "0x0000000007e7bae0",
+            "cmd": "off",
+            "arg": null
+        },
+        {
+            "type": "execute",
+            "sid": "0x0000000007200259",
+            "cmd": "off",
+            "arg": null
+        }
+    ],
+    "actionsFalse": [],
+    "name": {
+        "en": "Bedroom button",
+        "pl": ""
+    }
+}

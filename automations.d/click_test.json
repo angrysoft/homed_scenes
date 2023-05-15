@@ -1,0 +1,54 @@
+{
+    "sid": "click_test",
+    "type": "actionHandler",
+    "trigger": "status.0x00124b001f4502db.action.single",
+    "state": [
+        {
+            "attrName": "click_state",
+            "attrType": "bool",
+            "attrValue": false
+        }
+    ],
+    "conditions": [
+        {
+            "type": "and",
+            "testCases": [
+                {
+                    "type": "state",
+                    "attrName": "click_state",
+                    "attrValue": false
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "0x0000000007200259",
+            "cmd": "on",
+            "arg": null
+        },
+        {
+            "type": "state",
+            "cmd": "click_state",
+            "arg": true
+        }
+    ],
+    "actionsFalse": [
+        {
+            "type": "execute",
+            "sid": "0x0000000007200259",
+            "cmd": "on",
+            "arg": null
+        },
+        {
+            "type": "state",
+            "cmd": "click_state",
+            "arg": false
+        }
+    ],
+    "name": {
+        "en": "Click Test",
+        "pl": ""
+    }
+}
