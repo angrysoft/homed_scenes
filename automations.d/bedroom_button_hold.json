@@ -1,7 +1,7 @@
 {
     "sid": "bedroom_button_hold",
     "type": "actionHandler",
-    "trigger": "status.0x00158d000200a020.action.hold",
+    "trigger": "status.0x00158d00033ef2d8.action.hold",
     "conditions": [],
     "actions": [
         {
