@@ -1,7 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/seba/workspace/homedaemon_scenes'
-install -d /etc/homedaemon/scenes
-install -d /etc/homedaemon/conf.d
-cp -v scenes/*.py /etc/homedaemon/scenes
-make: Leaving directory '/home/seba/workspace/homedaemon_scenes'
- 
