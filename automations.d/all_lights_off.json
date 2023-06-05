@@ -1,7 +1,7 @@
 {
     "sid": "all_lights_off",
     "type": "actionHandler",
-    "trigger": "action.all_lights.off",
+    "trigger": "action.required.all_lights.off",
     "conditions": [],
     "actions": [
         {
