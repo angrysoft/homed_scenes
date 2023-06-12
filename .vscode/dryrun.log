@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/seba/workspace/homedaemon_scenes'
+install -d /etc/homedaemon/automations.d
+cp -v automations.d/*.json /etc/homedaemon/automations.d
+make: Leaving directory '/home/seba/workspace/homedaemon_scenes'
+ 

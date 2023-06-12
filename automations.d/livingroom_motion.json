@@ -1,5 +1,5 @@
 {
-    "sid": "livinroom_motion",
+    "sid": "living_room_motion",
     "type": "automation",
     "trigger": "status.0x00158d0002ec2fa6.occupancy.true",
     "conditions": [

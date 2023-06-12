@@ -1,0 +1,19 @@
+{
+    "sid": "living_room_motion",
+    "type": "automation",
+    "trigger": "status.0x00158d0002ec2fa6.no_occupancy_since.900",
+    "conditions": [],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "0x0000000007e7bae0",
+            "cmd": "off",
+            "arg": null
+        }
+    ],
+    "actionsFalse": [],
+    "name": {
+        "en": "entry_door_nomotion",
+        "pl": ""
+    }
+}
