@@ -1,7 +1,7 @@
 {
     "sid": "entry_door_nomotion_since",
     "type": "automation",
-    "trigger": "status.0x00158d00029a49ba.no_occupancy_since.60",
+    "trigger": "status.0x00158d00029a49ba.no_occupancy_since.120",
     "conditions": [],
     "actions": [
         {
