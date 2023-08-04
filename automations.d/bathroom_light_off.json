@@ -2,18 +2,7 @@
     "sid": "bathroom_light_off",
     "type": "actionHandler",
     "trigger": "status.0x00158d0002abac97.state_right.OFF",
-    "conditions": [
-        {
-            "type": "and",
-            "testCases": [
-                {
-                    "type": "state",
-                    "attrName": "occupancy",
-                    "attrValue": true
-                }
-            ]
-        }
-    ],
+    "conditions": [],
     "actions": [
         {
             "type": "execute",
