@@ -8,12 +8,14 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 12 22:20:22 2023
+# Make data base, printed on Sat Dec  9 10:04:13 2023
 
 # Variables
 
 # environment
 GDK_BACKEND = x11
+# environment
+MEMORY_PRESSURE_WRITE = c29tZSAyMDAwMDAgMjAwMDAwMAA=
 # environment
 OOO_FORCE_DESKTOP = gnome-shell
 # environment
@@ -53,7 +55,7 @@ OLDPWD = /home/seba
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/seba/.config/Code/CachedData/b380da4ef1ee00e224a15c1d4d9793e27c2b6302
+VSCODE_CODE_CACHE_PATH = /home/seba/.config/Code/CachedData/1a5daa3a0231a0fbba4f14db7ec463cf99d7768e
 # environment
 LANG = C
 # environment
@@ -62,12 +64,16 @@ XAUTHORITY = /run/user/1000/gdm/Xauthority
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# environment
+MEMORY_PRESSURE_WATCH = /sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure
 # makefile
 MAKEFLAGS = pqrR
 # makefile
 CURDIR := /home/seba/workspace/homedaemon_scenes
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -87,13 +93,13 @@ MAKEFILE_LIST := Makefile
 # environment
 ZSH = /home/seba/.oh-my-zsh
 # environment
-VSCODE_PID = 3502
+VSCODE_PID = 3887
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/razen:@/tmp/.ICE-unix/2076,unix/razen:/tmp/.ICE-unix/2076
+SESSION_MANAGER = local/razen:@/tmp/.ICE-unix/2237,unix/razen:/tmp/.ICE-unix/2237
 # automatic
 *F = $(notdir $*)
 # environment
@@ -133,13 +139,11 @@ MAKEFILES :=
 # automatic
 ^F = $(notdir $^)
 # environment
-INVOCATION_ID = e9e40df47e6240d0b19bbc824f0ee81e
+INVOCATION_ID = 9a0c7619323346dc8bb92a464b8fbfd3
 # environment
 USERNAME = seba
 # automatic
 ?F = $(notdir $?)
-# environment
-GTK_IM_MODULE = ibus
 # environment
 XDG_CURRENT_DESKTOP = GNOME
 # automatic
@@ -159,7 +163,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := install
 # environment
-SYSTEMD_EXEC_PID = 2093
+SYSTEMD_EXEC_PID = 2268
 # environment
 EDITOR = vim
 # environment
@@ -171,11 +175,11 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1762
+MANAGERPID = 1847
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3502
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3887
 # environment
-SSH_AGENT_PID = 2030
+SSH_AGENT_PID = 2178
 # environment
 PAGER = less
 # environment
@@ -185,8 +189,9 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:32831
+JOURNAL_STREAM = 8:33101
 # environment
+ 
 XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
@@ -197,7 +202,7 @@ QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-df7c7742-1.79-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-df7c7742-1.84-main.sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -211,7 +216,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = gnome
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=5/129=4%
+# Load=101/1024=10%, Rehash=0, Collisions=7/131=5%
 
 # Pattern-specific Variable Values
 
@@ -219,9 +224,9 @@ GDMSESSION = gnome
 
 # Directories
 
-# . (device 26, inode 410102): 9 files, no impossibilities.
+# . (device 27, inode 410102): 10 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -277,12 +282,12 @@ install:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 17 / storage = 160 B / avg = 9 B
-# current buf: size = 8162 B / used = 160 B / count = 17 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 18 / storage = 171 B / avg = 9 B
+# current buf: size = 8162 B / used = 171 B / count = 18 / avg = 9 B
 
-# strcache performance: lookups = 26 / hit rate = 34%
+# strcache performance: lookups = 27 / hit rate = 33%
 # hash-table stats:
-# Load=17/8192=0%, Rehash=0, Collisions=0/26=0%
-# Finished Make data base on Mon Jun 12 22:20:22 2023
+# Load=18/8192=0%, Rehash=0, Collisions=0/27=0%
+# Finished Make data base on Sat Dec  9 10:04:13 2023
 
  

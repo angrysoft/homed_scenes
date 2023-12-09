@@ -32,7 +32,7 @@
             "type": "execute",
             "sid": "0x0000000007e7bae0",
             "cmd": "setBright",
-            "arg": 30
+            "arg": 60
         }
     ],
     "actionsFalse": [
