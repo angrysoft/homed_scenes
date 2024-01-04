@@ -1,0 +1,38 @@
+{
+    "sid": "bedroom_button_click",
+    "type": "actionHandler",
+    "trigger": "status.0x00158d00033ef2d8.action.single",
+    "conditions": [
+        {
+            "type": "and",
+            "testCases": [
+                {
+                    "type": "status",
+                    "sid": "0x00158d0002b74c28",
+                    "attrName": "lightSwitch",
+                    "attrValue": "off"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "1001f10ae4",
+            "cmd": "lightSwitch",
+            "arg": true
+        }
+    ],
+    "actionsFalse": [
+        {
+            "type": "execute",
+            "sid": "1001f10ae4",
+            "cmd": "lightSwitch",
+            "arg": false
+        }
+    ],
+    "name": {
+        "en": "Bedroom button",
+        "pl": ""
+    }
+}
