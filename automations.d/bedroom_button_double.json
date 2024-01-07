@@ -1,0 +1,22 @@
+{
+    "sid": "bedroom_button_double",
+    "type": "actionHandler",
+    "trigger": "status.0x00158d00033ef2d8.action.double",
+    "conditions": [
+    ],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "0x00158d000283b219",
+            "cmd": "toggle",
+            "arg": null
+        }
+    ],
+    "actionsFalse": [
+       
+    ],
+    "name": {
+        "en": "Bedroom button",
+        "pl": ""
+    }
+}
