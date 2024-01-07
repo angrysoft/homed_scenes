@@ -8,10 +8,12 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Dec  9 10:04:13 2023
+# Make data base, printed on Sun Jan  7 20:14:07 2024
 
 # Variables
 
+# environment
+JAVA_HOME = /usr/lib/jvm/java-21-openjdk-amd64
 # environment
 GDK_BACKEND = x11
 # environment
@@ -55,7 +57,7 @@ OLDPWD = /home/seba
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/seba/.config/Code/CachedData/1a5daa3a0231a0fbba4f14db7ec463cf99d7768e
+VSCODE_CODE_CACHE_PATH = /home/seba/.config/Code/CachedData/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2
 # environment
 LANG = C
 # environment
@@ -93,13 +95,13 @@ MAKEFILE_LIST := Makefile
 # environment
 ZSH = /home/seba/.oh-my-zsh
 # environment
-VSCODE_PID = 3887
+VSCODE_PID = 3457
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/razen:@/tmp/.ICE-unix/2237,unix/razen:/tmp/.ICE-unix/2237
+SESSION_MANAGER = local/razen:@/tmp/.ICE-unix/2230,unix/razen:/tmp/.ICE-unix/2230
 # automatic
 *F = $(notdir $*)
 # environment
@@ -139,7 +141,7 @@ MAKEFILES :=
 # automatic
 ^F = $(notdir $^)
 # environment
-INVOCATION_ID = 9a0c7619323346dc8bb92a464b8fbfd3
+INVOCATION_ID = a2ff99d03bc5404b8c3e4ce08fc91ca7
 # environment
 USERNAME = seba
 # automatic
@@ -163,7 +165,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := install
 # environment
-SYSTEMD_EXEC_PID = 2268
+SYSTEMD_EXEC_PID = 2270
 # environment
 EDITOR = vim
 # environment
@@ -175,11 +177,11 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1847
+MANAGERPID = 1856
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3887
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3457
 # environment
-SSH_AGENT_PID = 2178
+SSH_AGENT_PID = 2170
 # environment
 PAGER = less
 # environment
@@ -189,9 +191,8 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:33101
+JOURNAL_STREAM = 8:30043
 # environment
- 
 XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
@@ -202,7 +203,7 @@ QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-df7c7742-1.84-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-df7c7742-1.85-main.sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -216,7 +217,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = gnome
 # variable set hash-table stats:
-# Load=101/1024=10%, Rehash=0, Collisions=7/131=5%
+# Load=102/1024=10%, Rehash=0, Collisions=7/132=5%
 
 # Pattern-specific Variable Values
 
@@ -288,6 +289,6 @@ install:
 # strcache performance: lookups = 27 / hit rate = 33%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=0/27=0%
-# Finished Make data base on Sat Dec  9 10:04:13 2023
+# Finished Make data base on Sun Jan  7 20:14:07 2024
 
  
