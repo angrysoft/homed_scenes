@@ -8,7 +8,7 @@
         {
             "type": "execute",
             "sid": "1001f10ae4",
-            "cmd": "backlightToggle",
+            "cmd": "ambientLightToggle",
             "arg": null
         }
     ],

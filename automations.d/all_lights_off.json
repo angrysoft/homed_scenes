@@ -12,6 +12,18 @@
         },
         {
             "type": "execute",
+            "sid": "1000b6e1c8",
+            "cmd": "off",
+            "arg": null
+        },
+        {
+            "type": "execute",
+            "sid": "1000b6063e",
+            "cmd": "off",
+            "arg": null
+        },
+        {
+            "type": "execute",
             "sid": "0x00158d00029b1929",
             "cmd": "allOff",
             "arg": null

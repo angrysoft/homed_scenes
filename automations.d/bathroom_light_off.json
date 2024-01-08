@@ -11,6 +11,12 @@
             "arg": false
         },
         {
+            "type": "execute",
+            "sid": "1000b6063e",
+            "cmd": "off",
+            "arg": null
+        },
+        {
             "type": "state",
             "cmd": "occupancy",
             "arg": false
