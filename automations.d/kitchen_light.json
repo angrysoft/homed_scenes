@@ -7,13 +7,13 @@
         {
             "type": "execute",
             "sid": "0x00158d0002bffe5a",
-            "cmd": "toggleLeft",
+            "cmd": "toggleOne",
             "arg": null
         },
         {
             "type": "execute",
             "sid": "0x00158d0002bffe5a",
-            "cmd": "right",
+            "cmd": "two",
             "arg": false
         }
     ],

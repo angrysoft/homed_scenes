@@ -37,7 +37,7 @@
         {
             "type": "execute",
             "sid": "0x00158d0002a18c2b",
-            "cmd": "left",
+            "cmd": "one",
             "arg": false
         },
         {
