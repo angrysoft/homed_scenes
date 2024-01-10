@@ -24,7 +24,7 @@
         },
         {
             "type": "execute",
-            "sid": "0x00158d00029b1929",
+            "sid": "1001f10a68",
             "cmd": "allOff",
             "arg": null
         },
@@ -36,13 +36,13 @@
         },
         {
             "type": "execute",
-            "sid": "0x00158d0002a18c2b",
+            "sid": "1001f10b53",
             "cmd": "one",
             "arg": false
         },
         {
             "type": "execute",
-            "sid": "0x00158d0002abac97",
+            "sid": "1001f10883",
             "cmd": "allOff",
             "arg": null
         },

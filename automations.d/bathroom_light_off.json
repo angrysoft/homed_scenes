@@ -1,13 +1,13 @@
 {
     "sid": "bathroom_light_off",
     "type": "actionHandler",
-    "trigger": "status.0x00158d0002abac97.one.off",
+    "trigger": "status.1001f10883.one.off",
     "conditions": [],
     "actions": [
         {
             "type": "execute",
-            "sid": "0x00158d0002abac97",
-            "cmd": "one",
+            "sid": "1001f10883",
+            "cmd": "two",
             "arg": false
         },
         {

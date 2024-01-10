@@ -24,7 +24,7 @@
     "actions": [
         {
             "type": "execute",
-            "sid": "0x00158d0002abac97",
+            "sid": "1001f10883",
             "cmd": "allOff",
             "arg": null
         },

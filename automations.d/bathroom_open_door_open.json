@@ -6,8 +6,8 @@
     "actions": [
         {
             "type": "execute",
-            "sid": "0x00158d0002abac97",
-            "cmd": "two",
+            "sid": "1001f10883",
+            "cmd": "one",
             "arg": true
         }
     ],
