@@ -1,7 +1,7 @@
 {
-    "sid": "wallswitch_double_right",
+    "sid": "switch_long_click",
     "type": "actionHandler",
-    "trigger": "status.0x00158d0002a18c2b.action.double_right",
+    "trigger": "status.0x00124b001f4502db.action.long",
     "conditions": [],
     "actions": [
         {
@@ -12,7 +12,7 @@
     ],
     "actionsFalse": [],
     "name": {
-        "en": "WallSwitch button",
+        "en": "Button",
         "pl": ""
     }
 }
