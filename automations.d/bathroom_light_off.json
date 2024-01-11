@@ -1,7 +1,7 @@
 {
     "sid": "bathroom_light_off",
     "type": "actionHandler",
-    "trigger": "status.1001f10883.one.off",
+    "trigger": "status.1001f10883.outlet0.off",
     "conditions": [],
     "actions": [
         {
