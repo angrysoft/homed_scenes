@@ -37,7 +37,7 @@
         {
             "type": "execute",
             "sid": "1001f10b53",
-            "cmd": "one",
+            "cmd": "outlet0",
             "arg": false
         },
         {

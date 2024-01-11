@@ -7,7 +7,7 @@
         {
             "type": "execute",
             "sid": "1001f10883",
-            "cmd": "one",
+            "cmd": "outlet0",
             "arg": true
         }
     ],
