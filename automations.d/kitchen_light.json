@@ -6,13 +6,13 @@
     "actions": [
         {
             "type": "execute",
-            "sid": "0x00158d0002bffe5a",
+            "sid": "1001f1082f",
             "cmd": "toggleOutlet0",
             "arg": null
         },
         {
             "type": "execute",
-            "sid": "0x00158d0002bffe5a",
+            "sid": "1001f1082f",
             "cmd": "outlet1",
             "arg": false
         }
