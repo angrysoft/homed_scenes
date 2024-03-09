@@ -13,8 +13,8 @@
         {
             "type": "execute",
             "sid": "1000b6063e",
-            "cmd": "off",
-            "arg": null
+            "cmd": "outlet",
+            "arg": false
         },
         {
             "type": "state",
