@@ -1,7 +1,7 @@
 {
-    "sid": "switch_long_click",
+    "sid": "switch_db_click",
     "type": "actionHandler",
-    "trigger": "status.0x00124b001f4502db.action.long",
+    "trigger": "status.0x00124b001f4502db.action.double",
     "conditions": [],
     "actions": [
         {
