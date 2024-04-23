@@ -1,7 +1,14 @@
 {
-    "sid": "bathroom_no_motion",
+    "sid": "bathroom_occupancy",
     "type": "automation",
     "trigger": "status.0x0cae5ffffec12a16.occupancy.*",
+    "state": [
+        {
+            "attrName": "occupancy",
+            "attrType": "bool",
+            "attrValue": false
+        }
+    ],
     "conditions": [
         {
             "type": "and",
