@@ -25,12 +25,7 @@
         {
             "type": "execute",
             "sid": "1001f10883",
-            "cmd": "allOff",
-            "arg": null
-        },
-        {
-            "type": "state",
-            "cmd": "occupancy",
+            "cmd": "outlet0",
             "arg": false
         }
     ],

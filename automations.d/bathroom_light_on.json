@@ -1,0 +1,31 @@
+{
+    "sid": "bathroom_light_on",
+    "type": "actionHandler",
+    "trigger": "status.1001f10883.outlet0.on",
+    "conditions": [
+        {
+            "type": "and",
+            "testCases": [
+                {
+                    "type": "qt",
+                    "sid": "0x00158d0002c9d230",
+                    "attrName": "humidity",
+                    "attrValue": 70
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "1001f10883",
+            "cmd": "outlet1",
+            "arg": true
+        }
+    ],
+    "actionsFalse": [],
+    "name": {
+        "en": "Bathroom door open",
+        "pl": ""
+    }
+}

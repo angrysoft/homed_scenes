@@ -27,8 +27,8 @@
         {
             "type": "execute",
             "sid": "1001f10883",
-            "cmd": "allOff",
-            "arg": null
+            "cmd": "outlet0",
+            "arg": false
         }
     ],
     "name": {
