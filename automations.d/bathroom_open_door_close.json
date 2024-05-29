@@ -35,6 +35,7 @@
             "cmd": "occupancy",
             "arg": true
         }
+
     ],
     "name": {
         "en": "Bathroom door open",

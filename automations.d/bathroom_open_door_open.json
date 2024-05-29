@@ -9,6 +9,11 @@
             "sid": "1001f10883",
             "cmd": "outlet0",
             "arg": true
+        }, {
+            "type": "execute",
+            "sid": "1001f10883",
+            "cmd": "outlet1",
+            "arg": false
         }
     ],
     "actionsFalse": [],
