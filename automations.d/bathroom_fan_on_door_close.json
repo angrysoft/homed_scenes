@@ -11,6 +11,11 @@
                     "sid": "0x00158d0002c9d230",
                     "attrName": "humidity",
                     "attrValue": 75
+                },
+                {
+                    "type": "state",
+                    "attrName": "occupancy",
+                    "attrValue": true
                 }
             ]
         }
