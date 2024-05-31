@@ -15,7 +15,13 @@
                 {
                     "type": "state",
                     "attrName": "occupancy",
-                    "attrValue": true
+                    "attrValue": false
+                },
+                {
+                    "type": "status",
+                    "sid": "1001f10883",
+                    "attrName": "outlet0",
+                    "attrValue": "on"
                 }
             ]
         }
