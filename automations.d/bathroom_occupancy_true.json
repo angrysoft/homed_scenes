@@ -1,16 +1,16 @@
 {
     "sid": "bathroom_occupancy",
     "type": "automation",
-    "trigger": "status.0x0cae5ffffec12a16.occupancy.*",
+    "trigger": "status.0x0cae5ffffec12a16.occupancy.true",
     "conditions": [
         {
             "type": "and",
             "testCases": [
                 {
                     "type": "status",
-                    "sid": "0x0cae5ffffec12a16",
-                    "attrName": "occupancy",
-                    "attrValue": true
+                    "sid": "0x00124b0022431c36",
+                    "attrName": "contact",
+                    "attrValue": false
                 }
             ]
         }
@@ -24,15 +24,9 @@
         }
     ],
     "actionsFalse": [
-        {
-            "type": "execute",
-            "sid": "1001f10883",
-            "cmd": "outlet0",
-            "arg": false
-        }
     ],
     "name": {
-        "en": "bathroom no motion",
-        "pl": "Brak obecności w łazience"
+        "en": "bathroom motion",
+        "pl": "obecności w łazience"
     }
 }

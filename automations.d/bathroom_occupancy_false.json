@@ -1,0 +1,21 @@
+{
+    "sid": "bathroom_occupancy",
+    "type": "automation",
+    "trigger": "status.0x0cae5ffffec12a16.occupancy.false",
+    "conditions": [
+    ],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "1001f10883",
+            "cmd": "outlet0",
+            "arg": false
+        }
+    ],
+    "actionsFalse": [
+    ],
+    "name": {
+        "en": "bathroom no motion",
+        "pl": "Brak obecności w łazience"
+    }
+}
