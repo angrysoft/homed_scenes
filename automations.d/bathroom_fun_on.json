@@ -13,6 +13,12 @@
                     "attrValue": "on"
                 },
                 {
+                    "type": "status",
+                    "sid": "0x00124b0022431c36",
+                    "attrName": "contact",
+                    "attrValue": true
+                },
+                {
                     "type": "qt",
                     "sid": "0x00158d0002c9d230",
                     "attrName": "humidity",
