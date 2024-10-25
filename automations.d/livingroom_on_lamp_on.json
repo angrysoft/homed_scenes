@@ -40,13 +40,13 @@
             "type": "execute",
             "sid": "0x0000000007e7bae0",
             "cmd": "setCtPc",
-            "arg": 1
+            "arg": 10
         },
         {
             "type": "execute",
             "sid": "0x0000000007e7bae0",
             "cmd": "setBright",
-            "arg": 1
+            "arg": 40
         }
     ],
     "name": {
