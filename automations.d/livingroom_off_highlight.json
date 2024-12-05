@@ -1,0 +1,31 @@
+{
+    "sid": "living_room_on_highlight",
+    "type": "automation",
+    "trigger": "status.1001f10a68.outlet1.off",
+    "conditions": [
+        {
+            "type": "and",
+            "testCases": [
+                {
+                    "type": "lt",
+                    "sid": "0x04cf8cdf3c8a0236",
+                    "attrName": "illuminance",
+                    "attrValue": 9500
+                }
+            ]
+        }
+    ],
+    "actions": [
+         {
+            "type": "execute",
+            "sid": "0x0000000007e7bae0",
+            "cmd": "on",
+            "arg": null
+        }
+    ],
+    "actionsFalse": [],
+    "name": {
+        "en": "on highlight off",
+        "pl": ""
+    }
+}

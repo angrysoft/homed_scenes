@@ -1,0 +1,19 @@
+{
+    "sid": "living_room_on_highlight",
+    "type": "automation",
+    "trigger": "status.1001f10a68.outlet1.on",
+    "conditions": [],
+    "actions": [
+         {
+            "type": "execute",
+            "sid": "0x0000000007e7bae0",
+            "cmd": "off",
+            "arg": null
+        }
+    ],
+    "actionsFalse": [],
+    "name": {
+        "en": "on highlight on",
+        "pl": ""
+    }
+}
