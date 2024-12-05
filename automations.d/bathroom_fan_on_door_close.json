@@ -1,7 +1,7 @@
 {
     "sid": "bathroom_fan_on_door_close",
     "type": "actionHandler",
-    "trigger": "status.0x00124b0022431c36.contact.true",
+    "trigger": "status.0x0ceff6fffe3a12c7.contact.true",
     "conditions": [
         {
             "type": "and",

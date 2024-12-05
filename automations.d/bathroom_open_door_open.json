@@ -1,7 +1,7 @@
 {
     "sid": "bathroom_open_door",
     "type": "actionHandler",
-    "trigger": "status.0x00124b0022431c36.contact.false",
+    "trigger": "status.0x0ceff6fffe3a12c7.contact.false",
     "conditions": [],
     "actions": [
         {
