@@ -10,7 +10,7 @@
                     "type": "lt",
                     "sid": "0x04cf8cdf3c8a0236",
                     "attrName": "illuminance",
-                    "attrValue": 9500
+                    "attrValue": 40
                 },
                 {
                     "type": "gt",

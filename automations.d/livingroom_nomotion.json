@@ -1,7 +1,7 @@
 {
     "sid": "living_room_motion",
     "type": "automation",
-    "trigger": "status.0x00158d0002ec2fa6.no_occupancy_since.900",
+    "trigger": "status.0x8c65a3fffee9ea12.occupancy.false",
     "conditions": [],
     "actions": [
         {
@@ -19,7 +19,7 @@
     ],
     "actionsFalse": [],
     "name": {
-        "en": "entry_door_nomotion",
-        "pl": ""
+        "en": "living_room_no_motion",
+        "pl": "Brak obecności w salonie"
     }
 }
