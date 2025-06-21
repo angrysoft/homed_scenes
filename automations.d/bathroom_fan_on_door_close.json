@@ -36,7 +36,7 @@
     ],
     "actionsFalse": [],
     "name": {
-        "en": "Bathroom door open",
-        "pl": ""
+        "en": "Turn on bathroom fan on door close",
+        "pl": "Wyłącz wentylator w łazience po zamknięciu drzwi"
     }
 }
