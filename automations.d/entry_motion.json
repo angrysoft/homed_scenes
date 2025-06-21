@@ -19,7 +19,7 @@
         {
             "type": "execute",
             "sid": "1001f10b53",
-            "cmd": "ambientLight",
+            "cmd": "ambientLightState",
             "arg": true
         },
         {
@@ -31,7 +31,7 @@
         {
             "type": "execute",
             "sid": "1001f1082fca",
-            "cmd": "ambientLight",
+            "cmd": "ambientLightState",
             "arg": true
         },
         {
@@ -43,7 +43,7 @@
         {
             "type": "execute",
             "sid": "1001f10883",
-            "cmd": "ambientLight",
+            "cmd": "ambientLightState",
             "arg": true
         },
         {
