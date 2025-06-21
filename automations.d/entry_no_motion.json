@@ -1,0 +1,32 @@
+{
+    "sid": "entry_door_open",
+    "type": "automation",
+    "trigger": "status.0x00158d00029a49ba.occupancy.false",
+    "conditions": [
+    ],
+    "actions": [
+        {
+            "type": "execute",
+            "sid": "1001f10b53",
+            "cmd": "ambientLightState",
+            "arg": false
+        },
+        {
+            "type": "execute",
+            "sid": "1001f1082fca",
+            "cmd": "ambientLightState",
+            "arg": false
+        },
+        {
+            "type": "execute",
+            "sid": "1001f10883",
+            "cmd": "ambientLightState",
+            "arg": false
+        }
+    ],
+    "actionsFalse":[],
+    "name": {
+        "en": "entry_door_no_motion",
+        "pl": ""
+    }
+}

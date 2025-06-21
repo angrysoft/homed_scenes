@@ -55,7 +55,7 @@
     ],
     "actionsFalse":[],
     "name": {
-        "en": "entry_door_open",
+        "en": "entry_door_motion",
         "pl": ""
     }
 }
