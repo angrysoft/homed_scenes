@@ -1,5 +1,5 @@
 {
-    "sid": "bathroom_occupancy",
+    "sid": "bathroom_occupancy_false",
     "type": "automation",
     "trigger": "status.0x0cae5ffffec12a16.occupancy.false",
     "conditions": [

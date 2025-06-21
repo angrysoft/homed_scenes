@@ -1,5 +1,5 @@
 {
-    "sid": "entry_door_open",
+    "sid": "entry_motion_ambient_light",
     "type": "automation",
     "trigger": "status.0x00158d00029a49ba.occupancy.true",
     "conditions": [
@@ -30,13 +30,13 @@
         },
         {
             "type": "execute",
-            "sid": "1001f1082fca",
+            "sid": "1001f1082f",
             "cmd": "ambientLightState",
             "arg": true
         },
         {
             "type": "execute",
-            "sid": "1001f1082fca",
+            "sid": "1001f1082f",
             "cmd": "setScene",
             "arg": "Night Light"
         },

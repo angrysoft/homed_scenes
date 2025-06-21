@@ -1,5 +1,5 @@
 {
-    "sid": "bathroom_close_door",
+    "sid": "bathroom_door_close",
     "type": "actionHandler",
     "trigger": "status.0x0ceff6fffe3a12c7.contact.true",
     "state": [

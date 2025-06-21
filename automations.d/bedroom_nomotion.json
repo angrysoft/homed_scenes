@@ -1,5 +1,5 @@
 {
-    "sid": "bedroom_nomotion",
+    "sid": "bedroom_no_motion",
     "type": "actionHandler",
     "trigger": "status.0x00158d0002ec03fe.no_occupancy_since.120",
     "conditions": [],

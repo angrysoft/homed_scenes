@@ -1,5 +1,5 @@
 {
-    "sid": "living_room_on_highlight",
+    "sid": "living_room_on_highlight_off",
     "type": "automation",
     "trigger": "status.1001f10a68.outlet1.off",
     "conditions": [

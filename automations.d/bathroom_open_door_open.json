@@ -1,5 +1,5 @@
 {
-    "sid": "bathroom_open_door",
+    "sid": "bathroom_door_open",
     "type": "actionHandler",
     "trigger": "status.0x0ceff6fffe3a12c7.contact.false",
     "conditions": [],

@@ -1,5 +1,5 @@
 {
-    "sid": "living_room_motion",
+    "sid": "living_room_light_change_state",
     "type": "automation",
     "trigger": "action.automation.livingRoomLight.changeState",
     "conditions": [

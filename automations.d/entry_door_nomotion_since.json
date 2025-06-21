@@ -1,5 +1,5 @@
 {
-    "sid": "entry_door_nomotion_since",
+    "sid": "entry_door_no_motion_since",
     "type": "automation",
     "trigger": "status.0x00158d00029a49ba.no_occupancy_since.120",
     "conditions": [],
@@ -13,7 +13,7 @@
     ],
     "actionsFalse": [],
     "name": {
-        "en": "entry_door_nomotion",
+        "en": "entry_door_no_motion",
         "pl": ""
     }
 }
