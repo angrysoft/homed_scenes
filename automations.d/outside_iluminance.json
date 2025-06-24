@@ -1,8 +1,9 @@
 {
-    "sid": "living_room_on_highlight_off",
+    "sid": "outside_illuminance",
     "type": "automation",
-    "trigger": "status.1001f10a68.outlet1.off",
+    "trigger": "status.0x04cf8cdf3c8a0236.illuminance.*",
     "conditions": [
+        
     ],
     "actions": [
         {
@@ -13,7 +14,7 @@
     ],
     "actionsFalse": [],
     "name": {
-        "en": "on highlight off",
-        "pl": ""
+        "en": "Outside illuminance",
+        "pl": "Jasność na zewnątrz"
     }
 }
